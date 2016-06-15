@@ -1,0 +1,16 @@
+h1 {
+  color: orange;
+  margin-left: 10%;
+  font-size: 5em;
+  font-weight: bold;
+  text-shadow: 3px 3px 3px #000;
+}
+/*nav {
+  margin: 10% 10%;
+  margin-left: 10%;
+}*/
+
+body {
+    position: relative;
+}
+        

@@ -1,7 +1,60 @@
-<h1>Login</h1>
+<h3>Login</h3>
 
-<form class="form-group" name="loginForm" ng-submit="login.auth(login.user)">
-  <input type="text" name="name" ng-model="login.user.name" placeholder="name">
-  <input type="password" name="pword" ng-model="login.user.password" placeholder="password">
-  <button type="submit" class="btn btn-primary col-sm-3">Let's get it on!</button>
+<form class="form-group col-sm-3" name="loginForm" ng-submit="login.auth(login.user)">
+  <input class="col-sm-12" type="text" name="username" ng-model="login.user.username" placeholder="username">
+  <input class="col-sm-12" type="password" name="pword" ng-model="login.user.password" placeholder="password">
+  <button type="submit" class="btn btn-primary col-sm-12">Let's get it on!</button>
 </form>
+
+<form class="form-group col-sm-6" name="regForm" ng-submit="login.reg(login.newUser)">
+  <div class="input-group">
+    <span class="input-group-addon">First Name</span>
+    <input type="text" class="form-control" ng-model="login.newUser.fname">
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon">Last Name</span>
+    <input type="text" class="form-control" ng-model="login.newUser.lname">
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon">User name</span>
+    <input type="text" class="form-control" ng-model="login.newUser.uname">
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon">email</span>
+    <input type="email" class="form-control" ng-model="login.newUser.email">
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon">Password</span>
+    <input type="password" class="form-control" ng-model="login.newUser.password">
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon">Date of Birth</span>
+    <input type="text" class="form-control" ng-model="login.newUser.dob">
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon">Phone number</span>
+    <input type="text" class="form-control" ng-model="login.newUser.phone">
+  </div>
+
+  <div class="input-group">
+    <span class="col-sm-12">Gender:</span>
+    <select class="col-sm-12" ng-model="login.newUser.gender">
+      <option value="0">trans-female</option>
+      <option value="1">trans-male</option>
+      <option value="2">male</option>
+      <option value="3">female</option>
+      <option value="4">unspecified</option>
+  </div>
+
+
+  <div class="col-sm-12">
+    <h1>Interested in:</h1>
+    {{login.allMembers}}
+    <input type="checkbox" ng-model="login.newUser.chosen">  Trans-male</input>
+    <input type="checkbox" ng-model="login.newUser.chosen">  Trans-female</input>
+    <input type="checkbox" ng-model="login.newUser.chosen">  Female</input>
+    <input type="checkbox" ng-model="login.newUser.chosen">  Male</input>
+    <input type="checkbox" ng-model="login.newUser.chosen">  Other</input>
+  </div>
+
+{{login.allMembers}}
